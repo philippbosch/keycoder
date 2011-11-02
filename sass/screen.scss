@@ -1,0 +1,151 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass";
+@import "compass/reset";
+
+$sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif: Garamond, Georgia, serif;
+$mono: Monaco, monospace;
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body { 
+    text-align: center;
+    font-family: $serif;
+}
+
+#app {
+    width: 640px;
+    height: 480px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -320px;
+    margin-top: -240px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 0.5em;
+    @include text-shadow(
+        #FFF 0 1px,
+        rgba(#000,0.2) 0 2px
+    );
+}
+
+#keys {
+    height: 85px;
+    
+    .key {
+        @include inline-block;
+        width: 72px;
+        height: 72px;
+        position: relative;
+        margin: 0 10px;
+        @include background(#111 linear-gradient(top, rgba(#FFF, 0.2), rgba(#FFF, 0) 40%, rgba(#FFF, 0) 97%, rgba(#FFF, 0.6) 99%, rgba(#FFF, 0) 99%));
+        @include box-shadow(rgba(#000,0.8) 0 2px);
+        @include border-radius(6px);
+        border: 1px solid #000;
+        color: #EEE;
+        font-family: "VAGRoundedStd-Thin", "VAG Rundschrift Light", sans-serif; 
+        font-size-adjust: 0.504; 
+        font-weight: 200; 
+        font-style: normal;
+        line-height: 72px;
+        font-size: 32px;
+        
+        &:before {
+            content: '+';
+            position: absolute;
+            left: -20px;
+            color: #999;
+            display: block;
+            width: 20px;
+            font-size: 16px;
+        }
+        
+        &:first-child:before {
+            content: '';
+        }
+        
+        &.modifier {
+            line-height: 100px;
+            font-size: 20px;
+            text-align: left;
+            padding-left: 15px;
+            
+            &.alt:after {
+                content: 'alt';
+                position: absolute;
+                top: 10px;
+                left: 15px;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+#keys, #codes {
+    margin: .5em 0;
+    font-size: 72px;
+}
+
+#codes {
+    @include clearfix;
+}
+
+#keycode, #charcode {
+    font-family: $mono;
+    position: relative;
+    width: 280px;
+    height: 1.5em;
+    line-height: 2;
+    padding: 10px 0;
+    border: 1px solid #BBB;
+    @include background(#EEE linear-gradient(top, rgba(#000, 0.1), rgba(#000, 0) 70%));
+    @include border-radius(10px);
+    @include box-shadow(
+        rgba(#000, 0.15) 0 1px 3px inset
+    );
+    
+    &:before {
+        text-transform: uppercase;
+        position: absolute;
+        top: 12px;
+        left: 8px;
+        right: 8px;
+        font-size: 14px;
+        line-height: 1;
+        color: rgba(#000, 0.5);
+    }
+}
+
+#keycode {
+    float: left;
+    
+    &:before {
+        content: "keycode";
+    }
+}
+
+#charcode {
+    float: right;
+    
+    &:before {
+        content: "charcode";
+    }
+}
+
+#about {
+    font-size: 12px;
+}
+
+a {
+    color: #666;
+}
