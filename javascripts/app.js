@@ -38,6 +38,9 @@
       if (_ref2 = e.keyCode, __indexOf.call(modifierKeyCodes, _ref2) < 0) {
         key = String.fromCharCode(e.keyCode).toUpperCase();
         $key = $("<span class=\"key\">" + key + "</span>");
+        if (e.keyCode === 32) {
+          $key.addClass('space');
+        }
         return $keys.append($key);
       }
     });

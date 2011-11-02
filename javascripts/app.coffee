@@ -27,4 +27,6 @@ $ ->
         if e.keyCode not in modifierKeyCodes
             key = String.fromCharCode(e.keyCode).toUpperCase()
             $key = $ """<span class="key">#{key}</span>"""
+            if e.keyCode == 32
+                $key.addClass 'space'
             $keys.append $key

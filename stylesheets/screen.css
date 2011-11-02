@@ -170,20 +170,24 @@ h1 {
   left: 15px;
   line-height: 1;
 }
+/* line 92, ../sass/screen.scss */
+#keys .key.space {
+  width: 400px;
+}
 
-/* line 94, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 #keys, #codes {
   margin: .5em 0;
   font-size: 72px;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 #codes {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 103, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 #keycode, #charcode {
   font-family: Monaco, monospace;
   position: relative;
@@ -209,7 +213,7 @@ h1 {
   -o-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 3px inset;
   box-shadow: rgba(0, 0, 0, 0.15) 0 1px 3px inset;
 }
-/* line 117, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 #keycode:before, #charcode:before {
   text-transform: uppercase;
   position: absolute;
@@ -221,30 +225,30 @@ h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 129, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 #keycode {
   float: left;
 }
-/* line 132, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 #keycode:before {
   content: "keycode";
 }
 
-/* line 137, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 #charcode {
   float: right;
 }
-/* line 140, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 #charcode:before {
   content: "charcode";
 }
 
-/* line 145, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 #about {
   font-size: 12px;
 }
 
-/* line 149, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 a {
   color: #666;
 }
